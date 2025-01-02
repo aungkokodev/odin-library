@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Odin Library</title>
+    <link rel="shortcut icon" href="./assets/odin.png" type="image/x-icon" />
+    <title>Library</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,11 +12,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
-    Now that you’ve had plenty of practice using Grid, we are going to build a
-    full dashboard design. Now that you’ve had plenty of practice using Grid, we
-    are going to build a full dashboard design.
+    <div class="container">
+      <div class="header">
+        <h1>Library</h1>
+      </div>
+      <div class="main">
+        <div class="book-list"></div>
+        <form class="book-form"></form>
+      </div>
+    </div>
   </body>
 </html>

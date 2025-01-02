@@ -9,4 +9,65 @@
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
+  --color-primary: #f59e0b;
+  --color-secondary: #0ea5e9;
+  --accent-primary: #fcd34d;
+  --accent-secondary: #7dd3fc;
+  --bg-primary: #fafafa;
+  --bg-secondary: #f5f5f5;
+  --text-light: #fafafa;
+  --text-dark: #0a0a0a;
+}
+
+.container {
+  background-color: var(--bg-secondary);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 1rem 2rem;
+  color: var(--color-primary);
+  background-color: var(--bg-primary);
+  box-shadow: 0px 0px 4px 0px rgba(136, 136, 136, 0.5);
+}
+
+.main {
+  max-width: 1500px;
+  height: calc(100vh - 70px);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 352px;
+  align-items: start;
+}
+
+.book-list {
+  padding: 2rem;
+}
+
+.book-form {
+  padding: 2rem;
+  margin: 2rem;
+  margin-left: 0;
+  border-radius: 0.5rem;
+  background-color: var(--bg-primary);
+  border-left: 1px solid var(--text-light);
+  box-shadow: 0px 0px 2px 0px rgba(136, 136, 136, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    display: block;
+    position: relative;
+  }
+
+  .book-form {
+    display: none;
+    width: 320px;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: calc(50% - 70px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
