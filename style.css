@@ -60,8 +60,8 @@
 }
 
 .book-card {
-  min-height: 360px;
   padding: 0.5rem;
+  padding-bottom: 1rem;
   border-radius: 0.5rem;
   background-color: var(--bg-primary);
   box-shadow: 0px 0px 4px 0px rgba(80, 80, 80, 0.5);
@@ -70,6 +70,7 @@
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
+  color: var(--color-primary);
 }
 
 .book-cover {
@@ -88,18 +89,15 @@
 .book-title {
   cursor: pointer;
   font-size: 14px;
-  color: var(--color-primary);
 }
 
 .book-author {
   cursor: pointer;
   font-size: 12px;
-  color: var(--color-secondary);
 }
 
 .book-attr {
   font-size: 12px;
-  color: var(--color-primary);
   display: flex;
   gap: 0.25rem;
   align-items: flex-start;
@@ -142,6 +140,81 @@
   text-decoration: underline;
 }
 
+.book-form {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  position: relative;
+}
+
+.book-form > p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.book-form > span:last-of-type {
+  display: flex;
+  gap: 1rem;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.book-form input {
+  outline: none;
+  color: #333333;
+  font-size: 1rem;
+  border-radius: 2rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--bg-secondary);
+  background-color: #f5f5f5;
+}
+
+.book-form button,
+#form-open {
+  font-size: 1rem;
+  border: none;
+  color: white;
+  border-radius: 2rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--accent-primary);
+  cursor: pointer;
+}
+
+.book-form button:hover,
+#form-open:hover {
+  background-color: var(--color-primary);
+  box-shadow: 0px 0px 2px 0px rgba(80, 80, 80, 0.5);
+}
+
+#form-open {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+#form-close {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.25rem;
+  background-color: var(--bg-secondary);
+}
+
+#form-close:hover {
+  background-color: #c0c0c0;
+}
+
 @media screen and (max-width: 768px) {
   .main {
     display: block;
@@ -156,5 +229,30 @@
     top: calc(50% - 70px);
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .book-list {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+
+  .book-card {
+    max-width: 200px;
+  }
+
+  #form-open {
+    display: block;
+  }
+
+  #form-close {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .book-list {
+    padding: 2rem 1rem;
+  }
+
+  .book-card {
+    margin: auto;
   }
 }

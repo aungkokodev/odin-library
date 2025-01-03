@@ -18,6 +18,7 @@
     <div class="container">
       <div class="header">
         <h1>Library</h1>
+        <button type="button" id="form-open">ADD BOOK</button>
       </div>
       <div class="main">
         <div class="book-list">
@@ -29,7 +30,7 @@
               Eloquent JavaScript, 3rd Edition: A Modern Introduction to
               Programming
             </p>
-            <p class="book-author">Marijn Haverbeke</p>
+            <p class="book-author">By Marijn Haverbeke</p>
             <div class="book-attr">
               <img src="./assets//book.svg" />
               <p class="book-pages">474 pages</p>
@@ -37,7 +38,49 @@
             </div>
           </div>
         </div>
-        <form class="book-form"></form>
+        <form class="book-form" id="book-form">
+          <p>ADD NEW BOOK</p>
+          <span>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Book Title..."
+              required
+              autofocus
+            />
+          </span>
+          <span>
+            <input
+              type="text"
+              id="author"
+              name="author"
+              placeholder="Book Author..."
+              required
+            />
+          </span>
+          <span>
+            <input
+              type="number"
+              id="pages"
+              name="pages"
+              min="1"
+              placeholder="Book Pages..."
+              required
+            />
+          </span>
+          <span>
+            Stauts:
+            <label>
+              <input type="radio" name="status" value="unread" checked /> Unread
+            </label>
+            <label>
+              <input type="radio" name="status" value="read" /> Read
+            </label>
+          </span>
+          <button type="submit">ADD BOOK</button>
+          <img src="./assets/close.svg" id="form-close" />
+        </form>
       </div>
     </div>
   </body>
