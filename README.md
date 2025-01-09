@@ -8,4 +8,4 @@ Check out the live preview [here](https://aungkokodev.github.io/odin-library/).
 
 ## Screenshot
 
-![Screenshot of admin dashboard project](./assets/screenshot.png "Admin Dashboard")
+![Screenshot of libiary](./assets/screenshot.png "Library")
