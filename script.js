@@ -65,10 +65,6 @@
     form.style.display = "none";
   });
 
-  window.addEventListener("resize", () => {
-    form.style.display = window.innerWidth > 768 ? "flex" : "none";
-  });
-
   /* */
   function Book(title, author, pages, status) {
     if (!new.target)
